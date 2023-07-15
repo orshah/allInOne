@@ -27,11 +27,11 @@ function CheckOutForm() {
   };
 
   return (
-    <div className="checkOut-form__container">
-      <div className="checkOut-form__box">
+    <div className="flex justify-center">
+      <div className="flex flex-col">
         <form onSubmit={onSubmitHandler}>
-          <div className="checkOut-form__inputInfo">
-            <h1>Insert Name and Address</h1>
+          <div className="flex flex-col">
+            <h1 className=" ">Insert Name and Address</h1>
             <input
               value={data.name}
               name="name"
@@ -114,7 +114,7 @@ function CheckOutForm() {
               placeholder="zip code"
             ></input>
           </div>
-          <div className="checkOut-form__inputCard">
+          <div className="flex flex-col">
             <h1>Payment</h1>
             <input
               placeholder="Card number"
