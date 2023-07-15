@@ -31,29 +31,44 @@ function CheckOutForm() {
       <div className="flex flex-col">
         <form onSubmit={onSubmitHandler}>
           <div className="flex flex-col">
-            <h1 className=" ">Insert Name and Address</h1>
+            <h1 className=" mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+              Insert Name and Address
+            </h1>
+            <label className="block text-sm font-medium leading-6 text-gray-900">
+              Name
+            </label>
             <input
+              className=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               value={data.name}
               name="name"
               onChange={onChangeHandler}
-              placeholder="Name"
             ></input>
+            <label className="block text-sm font-medium leading-6 text-gray-900">
+              Last Name
+            </label>
             <input
+              className=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               value={data.lastName}
               name="lastName"
               onChange={onChangeHandler}
-              placeholder="Last Name"
             ></input>
+            <label className="block text-sm font-medium leading-6 text-gray-900">
+              Address
+            </label>
             <input
+              className=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               value={data.address}
               name="address"
-              placeholder="address"
               onChange={onChangeHandler}
             ></input>
+            <label className="block text-sm font-medium leading-6 text-gray-900">
+              State
+            </label>
             <select
               onChange={onChangeHandler}
               value={data.state}
               name="selectState"
+              className=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             >
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -107,42 +122,64 @@ function CheckOutForm() {
               <option value="WI">Wisconsin</option>
               <option value="WY">Wyoming</option>
             </select>
+            <label className="block text-sm font-medium leading-6 text-gray-900">
+              Zip Code
+            </label>
             <input
+              className=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               name="zipCode"
               onChange={onChangeHandler}
               value={data.zipCode}
-              placeholder="zip code"
             ></input>
           </div>
           <div className="flex flex-col">
-            <h1>Payment</h1>
+            <h1 className=" mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+              Payment
+            </h1>
+            <label className="block text-sm font-medium leading-6 text-gray-900">
+              Card Number
+            </label>
             <input
-              placeholder="Card number"
+              className=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               name="cardNumber"
               onChange={onChangeHandler}
               value={data.cardNumber}
             ></input>
+            <label className="block text-sm font-medium leading-6 text-gray-900">
+              Card Holder
+            </label>
             <input
-              placeholder="Cardholder name"
+              className=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               name="cardHolder"
               onChange={onChangeHandler}
               value={data.cardHolder}
             ></input>
+            <label className="block text-sm font-medium leading-6 text-gray-900">
+              Expiration Date
+            </label>
             <input
-              placeholder="exp. date"
+              className=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               name="expDate"
               onChange={onChangeHandler}
               value={data.expDate}
             ></input>
+            <label className="block text-sm font-medium leading-6 text-gray-900">
+              CVV
+            </label>
             <input
-              placeholder="CVV"
+              className=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               name="cvv"
               onChange={onChangeHandler}
               value={data.cvv}
             ></input>
           </div>
         </form>
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-3"
+        >
+          Submit
+        </button>
       </div>
     </div>
   );
