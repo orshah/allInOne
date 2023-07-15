@@ -1,0 +1,14 @@
+.counter-App__container {
+  display: flex;
+  justify-content: center;
+}
+
+.counter-App__box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.counter-App__button {
+  font-size: 1.5rem;
+}
