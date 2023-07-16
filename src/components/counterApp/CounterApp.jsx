@@ -19,11 +19,17 @@ function CounterApp() {
   return (
     <div className="counter-App__container">
       <div className="counter-App__box">
-        <button className="counter-App__button" onClick={onClickHandlerMinus}>
+        <button
+          className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-3"
+          onClick={onClickHandlerMinus}
+        >
           -10
         </button>
-        <h1>{count}</h1>
-        <button className="counter-App__button" onClick={onClickHandlerPlus}>
+        <h1 className="lining-nums text-4xl">{count}</h1>
+        <button
+          className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-3"
+          onClick={onClickHandlerPlus}
+        >
           +10
         </button>
       </div>

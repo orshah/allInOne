@@ -8,7 +8,3 @@
   flex-direction: row;
   gap: 1rem;
 }
-
-.counter-App__button {
-  font-size: 1.5rem;
-}
