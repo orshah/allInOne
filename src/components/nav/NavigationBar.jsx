@@ -23,6 +23,9 @@ function nav() {
       <Link to="/todoapp">
         <h2 className="navigation-bar__text">TO DO</h2>
       </Link>
+      <Link to="/fetchapi">
+        <h2 className="navigation-bar__text">FETCH API</h2>
+      </Link>
     </div>
   );
 }

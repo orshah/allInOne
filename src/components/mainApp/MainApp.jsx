@@ -6,6 +6,7 @@ import FetchDog from "../fetchDog/FetchDog";
 import TodoApp from "../todoApp/TodoApp";
 import NavigationBar from "../nav/NavigationBar";
 import { Routes, Route } from "react-router-dom";
+import ApiFetch from "../apiFetch/ApiFetch";
 
 function MainApp() {
   return (
@@ -17,6 +18,7 @@ function MainApp() {
         <Route path="/cssboxes" element={<CssBoxes />} />
         <Route path="/fetchdog" element={<FetchDog />} />
         <Route path="/todoapp" element={<TodoApp />} />
+        <Route path="/fetchapi" element={<ApiFetch />} />
       </Routes>
     </div>
   );
