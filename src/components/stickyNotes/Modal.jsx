@@ -3,17 +3,17 @@ import React from "react";
 function Modal({ open, onClose, onChange, value, btnClick }) {
   if (!open) return null;
   return (
-    <div className="overlay flex justify-center">
-      <div className=" flex flex-col bg-slate-400 border-solid border-2 border-sky-500">
+    <div className="overlay absolute flex justify-center">
+      <div className=" flex flex-col border-solid border-2 rounded-md w-[400px] my-[200px] shadow-2xl">
         <p className=" font-bold self-end cursor-pointer p-2" onClick={onClose}>
-          X
+          ✖️
         </p>
-        <div className="content">
+        <div className="content flex flex-col px-1">
           <input
             onChange={onChange}
             value={value}
             type="text"
-            className=" block  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className=" block px-2  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           />
           <button
             onClick={btnClick}
