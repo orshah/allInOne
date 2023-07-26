@@ -7,6 +7,7 @@ import TodoApp from "../todoApp/TodoApp";
 import NavigationBar from "../nav/NavigationBar";
 import { Routes, Route } from "react-router-dom";
 import ApiFetch from "../apiFetch/ApiFetch";
+import StickyNotes from "../stickyNotes/StickyNotes";
 
 function MainApp() {
   return (
@@ -19,6 +20,7 @@ function MainApp() {
         <Route path="/fetchdog" element={<FetchDog />} />
         <Route path="/todoapp" element={<TodoApp />} />
         <Route path="/fetchapi" element={<ApiFetch />} />
+        <Route path="/sticky" element={<StickyNotes />} />
       </Routes>
     </div>
   );
