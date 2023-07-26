@@ -6,16 +6,18 @@ function TodoApp() {
   const [toDoList, setToDoList] = useState([]);
 
   const onClickHandler = () => {
-    setToDoList([...toDoList, toDo]);
+    const newTodo = {
+      id: new Date().getTime(),
+      text: toDo,
+    };
+    console.log(newTodo.id);
+    setToDoList([...toDoList, newTodo]);
   };
 
-  const todoListView = toDoList.map((el, id) => {
-    return (
-      <ol key={id} className=" text-center">
-        <li>{el}</li>
-      </ol>
-    );
-  });
+  const onDeleteHandler = (id) => {
+    const updatedTodo = toDoList.filter((todo) => todo.id !== id);
+    setToDoList(updatedTodo);
+  };
 
   const onChangeHandler = (e) => {
     setToDo(e.target.value);
@@ -30,7 +32,12 @@ function TodoApp() {
       >
         Add ToDO
       </button>
-      {todoListView}
+      {toDoList.map((el) => (
+        <div className=" flex flex-row gap-1" key={el.id}>
+          <p>{el.text}</p>
+          <button onClick={() => onDeleteHandler(el.id)}>🪣</button>
+        </div>
+      ))}
     </div>
   );
 }
