@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Btn from "../../img/button.jpg";
 import Modal from "./Modal";
 
 function StickyNotes() {
   const [inputModal, setInputModal] = useState(false);
   const [note, setNote] = useState("");
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(() => {
+    const saveNotes = localStorage.getItem("notes");
+    if (saveNotes) {
+      return JSON.parse(saveNotes);
+    } else {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   const onClickHandler = () => {
     setNotes([...notes, note]);
