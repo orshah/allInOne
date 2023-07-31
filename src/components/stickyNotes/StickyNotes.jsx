@@ -37,9 +37,12 @@ function StickyNotes() {
         <div className=" flex flex-row flex-wrap gap-2 justify-center ">
           {notes.map((el) => {
             return (
-              <h1 className=" text-4xl font-semi-bold font-press-start shadow-2xl flex  w-[250px] h-[250px] overflow-auto px-3 break-all rounded-md backdrop-blur-xl bg-white/10 text-slate-50">
-                {el}
-              </h1>
+              <div>
+                <h1 className=" text-4xl font-semi-bold font-press-start shadow-2xl flex  w-[250px] h-[250px] overflow-auto px-3 break-all rounded-md backdrop-blur-xl bg-white/10 text-slate-50">
+                  {el}
+                </h1>
+                <button>X</button>
+              </div>
             );
           })}
           <label htmlFor="addNote">
